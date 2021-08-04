@@ -1,97 +1,114 @@
-// ex1
-//const raining = true;
-// const cold = true;
-
-// if (raining) {
-//   console.log("Don't forget your umbrella!");
-// }
-
-// if (cold) {
-//   console.log("Make sure you pick out a scarf!");
-// }
-
-// console.log("Now you're ready to go outside!");
-
-//ex2
-// But what if we wanted to do one thing in one case and another in all other cases?
-// const cold = false;
-
-// if (cold) {
-//   console.log("Make sure you pick out a scarf!");
-// } else {
-//   console.log("Short sleeves are fine.");
-// }
-
-// Now, because cold is false, the console.log within our if statement will 
-//not be executed, but the code inside the else block will. If cold were true,
-// the opposite would happen—that is, the program would tell us to choose a
-// scarf to wear but it won't tell us short sleeves are OK.
-
-//ex3
-
-// const temperature = 16;
-
-// if (temperature < 0) {
-//   console.log("Make sure you pick out a scarf!");
-// } else if (temperature < 15) {
-//   console.log("Short sleeves won't cut it!");
-// } else {
-//   console.log("Short sleeves are fine.");
-// }
-
-// console.log("Now you're ready to go outside!");
-
-//explained
-//This looks a lot more complicated, so let's go through it step by step. 
-//Our first if condition is whether temperature is less than 0. If that 
-//condition evaluates to true, then JavaScript will tell us to wear a scarf 
-//before telling us to go outside. If this first if condition is false, then 
-//JavaScript will jump to the next else if condition, that is whether 
-//temperature is less than 15. In our case this is the first condition that
-// is true, and so this is what was logged to our console. If, however,
-// temperature was neither less than 0 nor less than 15, then the else
-// block would be executed.
-
-//Logical operators
-
-// if statements become even more powerful when we understand how to use
-// logical operators in conjunction with them. JavaScript's logical operators
-// are:
-
-// && - logical AND
-// || - logical OR
-// ! - logical NOT.
-// We can use these to write more complex expressions. For example, if a 
-//variable isCitizen holds a Boolean value representing whether or not
-// someone is a citizen, and age is that same person's age, we could write 
-//the following if statement.
-
-// const isCitizen = true;
-// const age = 26;
-
-// if (isCitizen && age > 18) {
-//   console.log("You are eligible to vote.");
-// }
-//
-// Here we're checking that both conditions, isCitizen and age > 18 are true
-// for the if statement overall to evaluate to true. If any of our two 
-//conditions are false, then the whole expression is false.
-
-// Let's consider another example.
-
-// const temperature = 45
-// if (temperature < -40 || temperature > 40) {
-//     console.log("Maybe going outside isn't such a great idea…");
+// const whichSchool  = function (age) {
+//   if (age < 13){
+//     return "Elementary School";
+//   } else if (age >= 13 && age <= 18) {
+//     return "Secondary School";
+//   } else {
+//     return "Lighthouse Labs";
 //   }
+// };
 
-//Let's take a look at one more example.
+// var x = 1;
+// while (x <= 10000) {
+//   console.log(x + "mississippi!");
+//   x = x + 1;
+// }
 
-const raining = false
-if (!raining) {
-  console.log("Leave your umbrella at home!");
+// var x = 1;
+
+// // while loop with a stop condition
+// while (x <= 20) {
+//     if (x % 3 === 0 && x % 5 === 0) {
+//         console.log("JuliaJames");
+//     }else if (x % 5 === 0) {
+//         console.log("James");
+//     }else if (x % 3 === 0) {
+//         console.log("Julia");
+//     }
+//     else {
+//         console.log(x);
+//     }
+//     // increment x at the end of each loop
+//     x = x + 1 ; 
+// }
+
+// var num = 99;
+
+// while (num >=1) {
+//     // Last iteration. Note occurances of bottle, bottle, bottleS
+//     if (num === 1) {
+//         console.log(num + " bottle of juice on the wall! "
+//                     + num + " bottle of juice! Take one down, pass it around... "
+//                     + (num-1) + " bottles of juice on the wall!");
+//     }
+//     // Second-last iteration. Note occurances of bottleS, bottleS, bottle
+//     else if (num === 2){
+//         console.log(num + " bottles of juice on the wall! "
+//                     + num + " bottles of juice! Take one down, pass it around... "
+//                     + (num-1) + " bottle of juice on the wall!");
+//     }
+//     // All other iterations. Note occurances of bottleS, bottleS, bottleS
+//     else {
+//         console.log(num + " bottles of juice on the wall! "
+//                     + num + " bottles of juice! Take one down, pass it around... "
+//                     + (num-1) + " bottles of juice on the wall!");
+//     }
+//     num = num - 1;
+// }
+
+// n = 60
+
+// // While loop with a stop condition
+// while (n >= 0) {
+//     if (n === 50) {
+//         console.log("Orbiter transfers from ground to internal power");
+//     }
+//     else if (n === 31) {
+//         console.log("Ground launch sequencer is go for auto sequence start");
+//     }
+//     else if (n === 16) {
+//         console.log("Activate launch pad sound suppression system");
+//     }
+//     else if (n === 10) {
+//         console.log("Activate main engine hydrogen burnoff system");
+//     }
+//     else if (n === 6) {
+//         console.log("Main engine start");
+//     }
+//     else if (n === 0) {
+//         console.log("Solid rocket booster ignition and liftoff!");
+//     }
+//     else{
+//         console.log("T-"+n+" seconds");
+//     }
+
+//     //Never forget to decrement/increment the iteration variable in a while loop
+//     // Otherwise, you loop will run infinite iterations
+//     n = n-1;
+// }
+
+// for (var i = 0; i < 6; i = i + 1) {
+//   console.log("Printing out i = " + i);
+// }
+
+//nested loop
+for (var x = 0; x < 5; x = x + 1) {
+  for (var y = 0; y < 3; y = y + 1) {
+    console.log(x + "," + y);
+  }
+} 
+
+//seat 
+var row = 0;  // initial value of the row
+var seat = 0; // initial value of the seat within a row
+
+// One loop inside another is called Nested loop.
+// Outer `for` loop, to iterate over the rows
+for (row = 0; row <= 25; row++){
+
+    // Inner `for` loop, to iterate over the seats within a row
+    // In this loop, the value of `row` variable would change only after 100 iterations
+    for(seat = 0; seat <= 99; seat++){
+        console.log(row+"-"+seat);
+    }
 }
-
-//We read the expression in the above example usually as "if not raining",
-// but it's not always intuitive what "not true" or "not false" mean unless
-// you remember that the ! operator reverses the value of raining. That is,
-// if raining is true, !raining is false. If raining is false, !raining is true.
