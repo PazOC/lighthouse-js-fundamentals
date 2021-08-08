@@ -96,20 +96,3 @@ var facebookProfile = {
   },
 };
 */
-
-const smartGarbage = function (trash, bins) {
-  const keys = Object.keys(bins);
-  for (let keys = 0; keys < keys.length; keys++) {
-    if (keys == recycling) {
-      bins += 1;
-    } else if (keys === waste) {
-      bins += 1;
-    } else if (keys === compost) {
-      bins += 1;
-    } else {
-      return undefined;
-    }
-  }
-  return bins;
-};
-smartGarbage("recycling", { waste: 4, recycling: 2, compost: 5 });
