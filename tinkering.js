@@ -84,50 +84,6 @@ Our function must return the name of the person who submitted (vegetables.submit
 
 // console.log(judgeVegetable(vegetables, metric));
 
-// const sumLargestNumbers = function (data) {
-//   let firstNum = Math.max(...data);
-//   data.splice(data.indexOf(firstNum), 1);
-//   let secondNum = Math.max(...data);
-
-//   return firstNum + secondNum;
-// };
-
-console.log(sumLargestNumbers([1, 10]));
-console.log(sumLargestNumbers([1, 2, 3]));
-console.log(sumLargestNumbers([10, 4, 34, 6, 92, 2]));
-
-const conditionalSum = function (values, condition) {
-  let num = 0;
-  for (let i = 0; i < values.length; i++) {
-    if (values[i] % 2 === 0 && condition === "even") {
-      num += values[i];
-    } else if (values[i] % 2 === 1 && condition === "odd") {
-      num += values[i];
-    }
-  }
-  return num;
-};
-
-console.log(conditionalSum([1, 2, 3, 4, 5], "even"));
-console.log(conditionalSum([1, 2, 3, 4, 5], "odd"));
-console.log(conditionalSum([13, 88, 12, 44, 99], "even"));
-console.log(conditionalSum([], "odd"));
-
-// function numberOfVowels(data) {
-//   let vowels = "aeiouAEIOU";
-//   let count = 0;
-//   for (let i = 0; i < data.length; i++) {
-//     if (vowels.indexOf(data[i]) !== -1) {
-//       count += 1;
-//     }
-//   }
-//   return count;
-// }
-
-// console.log(numberOfVowels("orange"));
-// console.log(numberOfVowels("lighthouse labs"));
-// console.log(numberOfVowels("aeiou"));
-
 // const instructorWithLongestName = function (instructors) {
 //   let longest = "";
 //   let index = 0;
@@ -158,3 +114,30 @@ console.log(conditionalSum([], "odd"));
 //     { name: "Domascus", course: "Web" },
 //   ])
 // );
+
+// const person = {
+//   firstName: 'Bob',
+//   lastName: 'Smith',
+//   fullName: function() {
+//     return this.firstName + ' ' + this.lastName;
+//   }
+// };
+// console.log('Hello, ' + person.fullName());
+
+
+// const myFunc = function() {
+//   console.log('Hello from myFunc!');
+// }
+// myFunc()
+
+// const anotherVar = myFunc;
+// anotherVar()
+
+const someObject = {
+  foo: 1,
+  bar: function() {
+    console.log('hello!');
+  }
+}
+
+someObject.bar()
